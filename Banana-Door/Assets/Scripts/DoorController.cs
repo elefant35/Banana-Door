@@ -10,6 +10,7 @@ public class DoorController : MonoBehaviour
     //Declare Code Controlled Variables
     [SerializeField] private int positionX; //used to keep track of the x position of the door on the grid//unserialize this field
     [SerializeField] private int positionY; //used to keep track of the y position of the door on the grid//unserialize this field
+
     private bool doorOpen = false;
 
     // Start is called before the first frame update

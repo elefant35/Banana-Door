@@ -12,12 +12,13 @@ public class PositionController : MonoBehaviour
     //Declare code controlled variables
     [SerializeField] private GameObject currentDoor;
 
+    //test variables
     // Start is called before the first frame update
     void Start()
     {
         //get grid controller
         GridController gridController = GameObject.Find("Grid").GetComponent<GridController>();
-        gridController.setPositionOnGrid(positionX, positionY, gameObject); //sets the position of the grid object on the grid
+        gridController.setPositionOnGrid(positionX, positionY, gameObject); //sets the position of the grid object on the grid   
     }
 
     // Update is called once per frame
