@@ -5,7 +5,7 @@ using UnityEngine;
 public class GridController : MonoBehaviour
 {
     //Declare user controlled variables
-    private GameObject[][] gridPos = new GameObject[7][];
+    private GameObject[][] gridPos = new GameObject[8][];
 
 
     //test variables
@@ -14,8 +14,14 @@ public class GridController : MonoBehaviour
 
     GridController()
     {
-        gridPos[0] = new GameObject[7];
-        gridPos[1] = new GameObject[7];
+        gridPos[0] = new GameObject[8];
+        gridPos[1] = new GameObject[8];
+        gridPos[2] = new GameObject[8];
+        gridPos[3] = new GameObject[8];
+        gridPos[4] = new GameObject[8];
+        gridPos[5] = new GameObject[8];
+        gridPos[6] = new GameObject[8];
+        gridPos[7] = new GameObject[8];
     }
 
     // Start is called before the first frame update
@@ -31,15 +37,18 @@ public class GridController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         //test = gridPos[0][0];
+         test = gridPos[5][3];
        // Debug.Log(gridPos[0][0]);
     }
 
     public void setPositionOnGrid(int posX, int posY, GameObject gridObject)
     {
-        gridPos[posX][posY] = gridObject;//GameObject.Find(gridObjectName); //GameObject.Find(gridObjectName)
-        Debug.Log("setpositiononGridCalled" + posX + posY);
+        
+        //gridPos[prevPosX][prevPosY] = null; //makes the previous grid position null
+        
 
+        gridPos[posX][posY] = gridObject;//GameObject.Find(gridObjectName); //GameObject.Find(gridObjectName)
+        //Debug.Log("setpositiononGridCalled" + posX + posY);
     }
 
     public GameObject getObjectByPos(int posX, int posY)

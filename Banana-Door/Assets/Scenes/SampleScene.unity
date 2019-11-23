@@ -234,7 +234,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positionX: 0
   positionY: 0
-  adjacentObjects: []
+  adjacentObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentDoor: {fileID: 0}
 --- !u!4 &926942742
 Transform:
@@ -280,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test: {fileID: 1680538663}
-  test2: {fileID: 1680538663}
+  test2: {fileID: 926942740}
 --- !u!4 &1661167644
 Transform:
   m_ObjectHideFlags: 0
