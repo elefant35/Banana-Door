@@ -5,7 +5,7 @@ using UnityEngine;
 public class GridController : MonoBehaviour
 {
     //Declare user controlled variables
-    private GameObject[][] gridPos = new GameObject[8][];
+    private GameObject[][] gridPos = new GameObject[8][]; 
 
 
     //test variables
@@ -61,6 +61,12 @@ public class GridController : MonoBehaviour
         {
             return null;
         }
+    }
+
+    public int getNextEmptyX(int ypos)
+    {
+        //maybe do a for loop here to iterate through the array
+        return 0;
     }
    
 }

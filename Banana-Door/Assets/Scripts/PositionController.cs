@@ -16,6 +16,8 @@ public class PositionController : MonoBehaviour
     //Declare code controlled variables
     [SerializeField] private GameObject currentDoor;
 
+    private bool hasDoor;
+
     //Below is used to ensure grids are marked as NULL after the position on the grid is changed
     //[SerializeField] private int prevPositionX; //previous/current horizontal position of the spot on the grid DESERIALIZE
     //[SerializeField] private int prevPositionY; //previous/current horizontal position of the spot on the grid DESERIALIZE
@@ -36,16 +38,6 @@ public class PositionController : MonoBehaviour
     {
         GridController gridController = GameObject.Find("Grid").GetComponent<GridController>();
         gridController.setPositionOnGrid(positionX, positionY, gameObject); //sets the position of the grid object on the grid  
-
-        /*if(positionX != prevPositionX)
-        {
-            prevPositionX = positionX;
-        }
-        if (positionY != prevPositionY)
-        {
-            prevPositionY = positionY;
-        }*/
-
         getAndSetAdjacentObjects();   //this probably shouldn't be in update it should be used right before adjacent objects are used
 
     }
@@ -140,6 +132,20 @@ public class PositionController : MonoBehaviour
 
         
     }
+
+    public void setDoor(GameObject door)
+    {
+        currentDoor = door;
+        hasDoor = true;
+        /*DoorController doorController = door.GetComponent<DoorController>();
+        doorController.setPositionObject(gameObject);*/
+    }
+    public void removeDoor()
+    {
+        currentDoor = null;
+        hasDoor = false;
+    }
+
 
 
 
