@@ -28,6 +28,7 @@ public class DoorController : MonoBehaviour
     {
         getPositionObject();
         moveToPosition(gridPositionObject.transform);
+        CheckEmptyBelow();
     }
     private void FixedUpdate()
     {
@@ -55,5 +56,17 @@ public class DoorController : MonoBehaviour
     {
         GridController gridController = GameObject.Find("Grid").GetComponent<GridController>();
         setPositionObject(gridController.getObjectByPos(positionX, positionY));
+    }
+
+    private void CheckEmptyBelow()
+    {       
+        if (positionX < 7)
+        {
+            GridController gridController = GameObject.Find("Grid").GetComponent<GridController>();
+            if(!gridController.HasDoor(positionX + 1, positionY))
+            {
+                positionX++;
+            }
+        }
     }
 }

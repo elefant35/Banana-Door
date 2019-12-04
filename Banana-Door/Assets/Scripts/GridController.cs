@@ -69,4 +69,19 @@ public class GridController : MonoBehaviour
         return 0;
     }
    
+    public bool HasDoor(int posX, int posY)
+    {
+        GameObject gridPosObject = getObjectByPos(posX, posY);
+        if(gridPosObject != null)
+        {
+            PositionController positionController = gridPosObject.GetComponent<PositionController>();
+            if (positionController.returnHasDoor())
+            {
+                return true;
+            }
+            else return false;
+        }
+
+        return false;
+    }
 }

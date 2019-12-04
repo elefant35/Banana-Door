@@ -16,7 +16,7 @@ public class PositionController : MonoBehaviour
     //Declare code controlled variables
     [SerializeField] private GameObject currentDoor;
 
-    private bool hasDoor;
+    private bool hasDoor = false;
 
     //Below is used to ensure grids are marked as NULL after the position on the grid is changed
     //[SerializeField] private int prevPositionX; //previous/current horizontal position of the spot on the grid DESERIALIZE
@@ -144,6 +144,11 @@ public class PositionController : MonoBehaviour
     {
         currentDoor = null;
         hasDoor = false;
+    }
+
+    public bool returnHasDoor()
+    {
+        return hasDoor;
     }
 
 
